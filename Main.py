@@ -133,10 +133,10 @@ def game(setup):
         print('\nYou have no more tries. My number was',num)
         print('Hehe, I guess I won this round.')
 
-    if answer('\nWould you like to play again?\n'):
-        return game(random_number())
-    else:
-        return '\nThanks for playing!'
+    if not answer('\nWould you like to play again?\n'):
+        return print('\nThanks for playing!')
+    
+    return game(random_number())
 
 # The function random_number() is responsible for returning a number within the range specify randomly 
 def random_number():
